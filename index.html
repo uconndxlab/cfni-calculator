@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- The page for the CFNI Calculator -->
+
+  <h3>Charitable Food Nutrition Index (CFNI) Calculator</h3>
+
+  <!-- Form for the calculator -->
+  <form id="calc-form">
+    <label>Enter amounts in pounds here:</label><br>
+    <label>Green:</label>
+    <input type="text" id="green" name="green-input"><br>
+    <label>Yellow:</label>
+    <input type="text" id="yellow" name="yellow-input"><br>
+    <label>Red:</label>
+    <input type="text" id="red" name="red-input"><br>
+  </form>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <!-- Display results -->
+  <p id="error"></p>
+
+  <div id="results">
+    <p id="total"></p>
+    <p id="percent-label"></p>
+    <p id="green-percent"></p>
+    <p id="yellow-percent"></p>
+    <p id="red-percent"></p>
+    <p id="index"></p>
+  </div>
+  
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
