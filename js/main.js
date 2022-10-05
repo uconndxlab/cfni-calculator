@@ -30,10 +30,15 @@ function calculate() {
 
 }
 
-var button = document.getElementById("cfni-calc-form");
 
-button.addEventListener("submit", function(e) {
-    e.preventDefault();
-    calculate();
-    return false;
-;});
+window.addEventListener('DOMContentLoaded', (event) => {
+    var button = document.getElementById("cfni-calc-form");
+    console.log(button);
+
+    button.addEventListener("submit", function(e) {
+        e.preventDefault();
+        calculate();
+        return false;
+    ;});
+});
+
