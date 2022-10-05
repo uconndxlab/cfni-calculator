@@ -4,6 +4,11 @@ function calculate() {
     var red = parseInt(document.getElementById("cfni-red").value);
 
     //hide the error and show the results
+    if (!green || !yellow || !red) {
+        document.getElementById("cfni-error").innerHTML = "Error: please enter all values.";
+        return;
+    }
+
     document.getElementById("cfni-error").innerHTML = "";
 
     // calculate total
@@ -41,4 +46,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
         return false;
     ;});
 });
-
