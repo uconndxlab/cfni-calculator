@@ -14,8 +14,10 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
+
   <!-- Place favicon.ico in the root directory -->
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -29,10 +31,10 @@
   
   <!-- The page for the CFNI Calculator -->
 
-  <h2>Charitable Food Nutrition Index (CFNI) Calculator</h2>
+  <h2 class="cfni-title">Charitable Food Nutrition Index (CFNI) Calculator</h2>
 
   <!-- Form for the calculator -->
-  <form id="cfni-calc-form">
+  <form id="cfni-calc-form" name="cfni-calc-form">
     <h3>Enter amounts in pounds here:</h3>
     <label for="cfni-green">Green:</label>
     <input type="number" id="cfni-green" name="green-input" min="0"><br>
