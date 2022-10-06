@@ -87,6 +87,79 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*General*/
+
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", sans-serif;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --color-light: #ffffff;
+  --color-dark: #303030;
+  --color-blue: #4683ff;
+  --color-accent: #c1ffcf;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-light);
+  color: var(--color-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 2;
+}
+
+.cfni-calc {
+  text-align: center;
+}
+.cfni-calc-form {
+  display: flex;
+  justify-content: center;
+}
+
+.cfni-calc-form label {
+  font-family: var(--ff-secondary);
+  display: inline-block;
+  clear: left;
+  width: 250px;
+  text-align: right;
+}
+
+.cfni-calc-form input {
+  display: inline-block;
+}
+
+.submit-button {
+  background: var(--color-accent);
+}
+
+/*Typography*/
+
+strong { font-weight: var(--fw-bold); }
+
+h1, h2, h3 {
+  line-height: 2;
+  margin: 0;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { 
+  font-size: var(--fs-h2); 
+  color: var(--color-blue);
+}
+h3 { font-size: var(--fs-h3); }
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
