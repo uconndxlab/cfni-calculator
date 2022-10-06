@@ -1,13 +1,17 @@
 function calculate() {
-    var green = parseInt(document.getElementById("cfni-green").value);
-    var yellow = parseInt(document.getElementById("cfni-yellow").value);
-    var red = parseInt(document.getElementById("cfni-red").value);
+    var green = document.getElementById("cfni-green").value;
+    var yellow = document.getElementById("cfni-yellow").value;
+    var red = document.getElementById("cfni-red").value;
 
     //hide the error and show the results
-    if (!green || !yellow || !red) {
+    if (red == "" || green == "" || yellow == "") {
         document.getElementById("cfni-error").innerHTML = "Error: please enter all values.";
         return;
     }
+
+    green = parseInt(green);
+    yellow = parseInt(yellow);
+    red = parseInt(red);
 
     document.getElementById("cfni-error").innerHTML = "";
 
@@ -37,10 +41,10 @@ function calculate() {
 
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    var button = document.getElementById("cfni-calc-form");
-    console.log(button);
+    var calcForm = document.getElementById("cfni-calc-form");
+    console.log(calcForm);
 
-    button.addEventListener("submit", function(e) {
+    calcForm.addEventListener("submit", function(e) {
         e.preventDefault();
         calculate();
         return false;
