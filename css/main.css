@@ -117,6 +117,7 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 2;
+  text-align: center;
 }
 
 .cfni-calc {
@@ -333,4 +334,3 @@ h3 { font-size: var(--fs-h3); }
     page-break-after: avoid;
   }
 }
-
