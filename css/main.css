@@ -94,17 +94,32 @@ textarea {
   --ff-secondary: "Source Code Pro", sans-serif;
 
   --fw-reg: 300;
+  --fw-light-bold: 600;
   --fw-bold: 900;
 
   --color-light: #ffffff;
-  --color-dark: #303030;
-  --color-blue: #4683ff;
-  --color-red: #ff2a00;
-  --color-accent: #c1ffcf;
-
+  --color-dark: #181816;
+  --color-green: #91ae42;
+  --color-yellow: #f4dd62;
+  --color-red: #e14b2b;
+  
   --fs-h1: 3rem;
   --fs-h2: 2rem;
   --fs-h3: 1rem;
+}
+
+@media(max-width: 800px) {
+  :root {
+    --fs-h1: 4rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.5rem;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -114,41 +129,49 @@ html {
 body {
   background: var(--color-light);
   color: var(--color-dark);
-  margin: 0;
+  margin: 0 auto;
+  max-width: 600px;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 2;
-  text-align: center;
 }
 
 .cfni-calc {
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .cfni-error {
   font-weight: var(--fw-bold);
   color: var(--color-red);
+  text-align: center;
 }
 
-.cfni-calc-form {
-  display: flex;
-  justify-content: center;
-}
-
-.cfni-calc-form label {
-  font-family: var(--ff-secondary);
+form {
+  margin-bottom: 10px;
   display: inline-block;
-  clear: left;
-  width: 250px;
+}
+
+label {
+  font-weight: var(--fw-light-bold);
+  display: inline-block;
+  width: 150px;
   text-align: right;
 }
 
-.cfni-calc-form input {
+input {
   display: inline-block;
 }
 
 .submit-button {
-  background: var(--color-accent);
+  border: none;
+  border-radius: 3px;
+  background: linear-gradient(var(--color-yellow), var(--color-green));
+}
+
+.cfni-results {
+  width: 300px;
+  height: 400px;
 }
 
 /*Typography*/

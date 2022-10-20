@@ -26,12 +26,15 @@
 
 <body>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   
   <!-- The page for the CFNI Calculator -->
   <div class="cfni-calc">
-    <h2 class="cfni-title">Charitable Food Nutrition Index (CFNI) Calculator</h2>
+    <img src="cfni-logo.png" height="100">
+    <h2 class="cfni-title">Calculator</h2>
 
     <!-- Form for the calculator -->
 
@@ -47,18 +50,13 @@
         <button id="cfni-submit-button" class="submit-button" type="submit">Calculate</button>
       </div>
     </form>
-    
   
     <!-- Display results -->
-    <p class = "cfni-error" id="cfni-error"></p>
-
     <div id="cfni-results">
-      <p id="cfni-total"></p>
-      <p id="cfni-percent-label"></p>
-      <p id="cfni-green-percent"></p>
-      <p id="cfni-yellow-percent"></p>
-      <p id="cfni-red-percent"></p>
+      <p class = "cfni-error" id="cfni-error"></p>
       <p id="cfni-index"></p>
+      
+      <canvas id="cfni-pie-chart"></canvas>
     </div>
   </div>
   
