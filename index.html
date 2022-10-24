@@ -34,29 +34,29 @@
   <!-- The page for the CFNI Calculator -->
   <div class="cfni-calc">
     <img src="cfni-logo.png" height="100">
-    <h2 class="cfni-title">Calculator</h2>
+    <h3 class="cfni-title">Calculator</h3><br>
 
     <!-- Form for the calculator -->
 
     <form id="cfni-calc-form">
       <h3>Enter amounts in pounds here:</h3>
-      <div class="cfni-calc-form"></div>
+      <div class="cfni-calc-form">
         <label for="cfni-green">Green:</label>
         <input type="number" id="cfni-green" name="green-input" min="0"><br>
         <label for="cfni-yellow">Yellow:</label>
         <input type="number" id="cfni-yellow" name="yellow-input" min="0"><br>
         <label for="cfni-red">Red:</label>
         <input type="number" id="cfni-red" name="red-input" min="0"><br>
-        <button id="cfni-submit-button" class="submit-button" type="submit">Calculate</button>
       </div>
+      <button id="cfni-submit-button" class="submit-button" type="submit">Calculate</button>
     </form>
   
     <!-- Display results -->
     <div id="cfni-results">
-      <p class = "cfni-error" id="cfni-error"></p>
-      <p id="cfni-index"></p>
-      
-      <canvas id="cfni-pie-chart"></canvas>
+      <p class="cfni-error" id="cfni-error"></p>
+      <p class="cfni-results-title" id="cfni-results-title"></p>
+      <canvas id="cfni-pie-chart" width="250%" height="100%"></canvas>
+      <p class="cfni-index" id="cfni-index"></p>
     </div>
   </div>
   

@@ -93,7 +93,7 @@ textarea {
   --ff-primary: "Source Sans Pro", sans-serif;
   --ff-secondary: "Source Code Pro", sans-serif;
 
-  --fw-reg: 300;
+  --fw-reg: 400;
   --fw-light-bold: 600;
   --fw-bold: 900;
 
@@ -106,14 +106,6 @@ textarea {
   --fs-h1: 3rem;
   --fs-h2: 2rem;
   --fs-h3: 1rem;
-}
-
-@media(max-width: 800px) {
-  :root {
-    --fs-h1: 4rem;
-    --fs-h2: 2.5rem;
-    --fs-h3: 1.5rem;
-  }
 }
 
 * {
@@ -138,6 +130,7 @@ body {
 
 .cfni-calc {
   margin-bottom: 10px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -150,6 +143,11 @@ body {
 form {
   margin-bottom: 10px;
   display: inline-block;
+}
+
+.cfni-calc-form {
+  position: relative;
+  left: -50px;
 }
 
 label {
@@ -170,8 +168,40 @@ input {
 }
 
 .cfni-results {
-  width: 300px;
-  height: 400px;
+  width: 500px;
+  height: 300px;
+  font-weight: var(--fw-reg);
+  line-height: 1;
+}
+
+.cfni-results-title {
+  font-weight: var(--fw-reg);
+  font-size: 1rem;
+}
+
+.cfni-index {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+}
+
+@media(max-width: 600px) {
+  :root {
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 0.75rem;
+  }
+  
+  label {
+    font-weight: var(--fw-light-bold);
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+  }
+
+  .cfni-calc-form {
+    position: relative;
+    left: -30px;
+  }
 }
 
 /*Typography*/

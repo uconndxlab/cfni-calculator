@@ -17,6 +17,7 @@ function calculate() {
 
     // calculate total
     var total = green + yellow + red;
+    document.getElementById("cfni-results-title").innerHTML = "Total amount of food in pounds: " + total;
 
     // calculate percentages
     var green_percent = (green / total) * 100;
@@ -25,9 +26,13 @@ function calculate() {
 
     // pie chart
 
+    Chart.defaults.font.family = "Source Sans Pro";
+
     let labels = ["Green", "Yellow", "Red"];
     
     let itemData = [green_percent, yellow_percent, red_percent];
+
+    let colors = ["#91ae42", "#f4dd62", "#e14b2b"];
 
     const data = {
         labels: labels,
@@ -35,7 +40,7 @@ function calculate() {
             data: itemData,
             borderColor: "#000000",
             borderWidth: 1,
-            backgroundColor: ["#91ae42", "#f4dd62", "#e14b2b"] //green, yellow, red
+            backgroundColor: colors //green, yellow, red
         }]
     };
 
@@ -45,9 +50,9 @@ function calculate() {
         options: {
             layout: {
                 padding: {
-                    left: 100,
-                    right: 100,
-                    bottom: 50
+                    left: 80,
+                    right: 80
+                    //bottom: 50
                 }
             },
             plugins: {
@@ -60,11 +65,14 @@ function calculate() {
                         return `${context.label}: ${context.value.toFixed(1)}%`;
                     },
                     position: "outside",
-                    textMargin: 10
+                    textMargin: 10,
+                    font: {
+                        size: 30,
+                        color: "#000000"
+                    }
                 },
                 title: {
-                    display: true,
-                    text: "Total amount of food in pounds: " + total
+                    display: false
                 },
                 tooltip: {
                     enabled: false
@@ -74,12 +82,13 @@ function calculate() {
     };
 
     const chart = new Chart(document.getElementById("cfni-pie-chart"), config);
+    
 
     // (From brief) Index = ((((0.7773 × Green) + (0.5923 × Yellow) + (0.3753 × Red)) − 37.53)/40.20) × 100
     //sample input: 1000, 580, 98
     //correct output: 78.3
     var index = ((((0.7773 * green_percent) + (0.5923 * yellow_percent) + (0.3753 * red_percent)) - 37.53) / 40.20) * 100;
-    //document.getElementById("cfni-index").innerHTML = "Index: " + index.toFixed(1);
+    document.getElementById("cfni-index").innerHTML = "Index: " + index.toFixed(1);
 
 }
 
