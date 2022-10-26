@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>WellSCAN CFNI Calculator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- The page for the CFNI Calculator -->
+
+
+  <div class="cfni-calc">
+
+    <!-- Form for the calculator -->
+
+    <form id="cfni-calc-form">
+      <header>
+        <img class="logo" src="cfni-logo.png">
+        <h3 class="cfni-title">CFNI Calculator</h3>
+      </header>
+      <h3>Enter amounts in pounds here:</h3>
+      <div class="cfni-calc-form">
+        <label for="cfni-green">Green:</label>
+        <input type="number" id="cfni-green" name="green-input" min="0"><br>
+        <label for="cfni-yellow">Yellow:</label>
+        <input type="number" id="cfni-yellow" name="yellow-input" min="0"><br>
+        <label for="cfni-red">Red:</label>
+        <input type="number" id="cfni-red" name="red-input" min="0"><br>
+      </div>
+      <button id="cfni-submit-button" class="submit-button" type="submit">Calculate</button>
+      <p class="cfni-error" id="cfni-error"></p>
+    </form>
+  
+    <!-- Display results -->
+    <div id="cfni-results">
+      <p class="cfni-index" id="cfni-index"></p>
+      <canvas id="cfni-pie-chart"></canvas>
+      <p class="cfni-results-title" id="cfni-results-title"></p>
+    </div>
+  </div>
+  
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
