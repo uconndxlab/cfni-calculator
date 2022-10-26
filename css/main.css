@@ -121,62 +121,94 @@ html {
 body {
   background: var(--color-light);
   color: var(--color-dark);
-  margin: 0 auto;
-  max-width: 600px;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 2;
 }
 
+#cfni-pie-chart {
+ 
+  display: none;
+
+}
+
+
 .cfni-calc {
   margin-bottom: 10px;
   padding: 20px;
-  text-align: center;
 }
+
+@media (min-width: 768px) {
+  form {
+    width: 50% !important;;
+  }
+  .cfni-calc {
+    display: flex;
+  }
+
+  #cfni-results {
+    width: 600px;
+    margin-left:45px;
+  }
+}
+
 
 .cfni-error {
   font-weight: var(--fw-bold);
   color: var(--color-red);
-  text-align: center;
+  display: none;
 }
 
 form {
   margin-bottom: 10px;
   display: inline-block;
+  width:100%;
 }
 
-.cfni-calc-form {
-  position: relative;
-  left: -50px;
-}
+.logo {width:120px;}
 
 label {
   font-weight: var(--fw-light-bold);
-  display: inline-block;
-  width: 150px;
-  text-align: right;
+  display: block;
+  text-align: left;
 }
 
 input {
   display: inline-block;
+  width:100%;
+  height:32px;
+  font-size:22px;
+  font-weight: 600;
 }
 
 .submit-button {
   border: none;
   border-radius: 3px;
   background: linear-gradient(var(--color-yellow), var(--color-green));
+  display: block;
+  color:#333;
+  font-weight: 800;
+  padding:8px 16px;
+  width:100%;
+  margin-top:25px;
 }
 
-.cfni-results {
-  width: 500px;
-  height: 300px;
+#cfni-results {
+  padding:25px;
   font-weight: var(--fw-reg);
   line-height: 1;
+  background-color: #eee;
+
+  text-align: center;
+
+  display: none;
 }
 
 .cfni-results-title {
   font-weight: var(--fw-reg);
   font-size: 1rem;
+
+  text-align: center;
 }
 
 .cfni-index {
@@ -184,7 +216,7 @@ input {
   font-size: var(--fs-h2);
 }
 
-@media(max-width: 600px) {
+/* @media(max-width: 600px) {
   :root {
     --fs-h1: 2.5rem;
     --fs-h2: 1.5rem;
@@ -202,7 +234,7 @@ input {
     position: relative;
     left: -30px;
   }
-}
+} */
 
 /*Typography*/
 

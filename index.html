@@ -32,13 +32,17 @@
   <script src="js/main.js"></script>
   
   <!-- The page for the CFNI Calculator -->
+
+
   <div class="cfni-calc">
-    <img src="cfni-logo.png" height="100">
-    <h3 class="cfni-title">Calculator</h3><br>
 
     <!-- Form for the calculator -->
 
     <form id="cfni-calc-form">
+      <header>
+        <img class="logo" src="cfni-logo.png">
+        <h3 class="cfni-title">CFNI Calculator</h3>
+      </header>
       <h3>Enter amounts in pounds here:</h3>
       <div class="cfni-calc-form">
         <label for="cfni-green">Green:</label>
@@ -49,14 +53,14 @@
         <input type="number" id="cfni-red" name="red-input" min="0"><br>
       </div>
       <button id="cfni-submit-button" class="submit-button" type="submit">Calculate</button>
+      <p class="cfni-error" id="cfni-error"></p>
     </form>
   
     <!-- Display results -->
     <div id="cfni-results">
-      <p class="cfni-error" id="cfni-error"></p>
-      <p class="cfni-results-title" id="cfni-results-title"></p>
-      <canvas id="cfni-pie-chart" width="250%" height="100%"></canvas>
       <p class="cfni-index" id="cfni-index"></p>
+      <canvas id="cfni-pie-chart"></canvas>
+      <p class="cfni-results-title" id="cfni-results-title"></p>
     </div>
   </div>
   

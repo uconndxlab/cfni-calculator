@@ -2,10 +2,12 @@ function calculate() {
     var green = document.getElementById("cfni-green").value;
     var yellow = document.getElementById("cfni-yellow").value;
     var red = document.getElementById("cfni-red").value;
+    var chart;
 
     //hide the error and show the results
     if (red == "" || green == "" || yellow == "") {
         document.getElementById("cfni-error").innerHTML = "Error: please enter all values.";
+        document.getElementById("cfni-error").style.display = "block";
         return;
     }
 
@@ -81,7 +83,17 @@ function calculate() {
         }
     };
 
-    const chart = new Chart(document.getElementById("cfni-pie-chart"), config);
+
+
+    document.getElementById("cfni-results").style.display = "block";
+    
+    let chartStatus = Chart.getChart("cfni-pie-chart"); // <canvas> id
+    if (chartStatus != undefined) {
+      chartStatus.destroy();
+    }
+
+    chart = new Chart(document.getElementById("cfni-pie-chart"), config);
+
     
 
     // (From brief) Index = ((((0.7773 × Green) + (0.5923 × Yellow) + (0.3753 × Red)) − 37.53)/40.20) × 100
